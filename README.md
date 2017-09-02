@@ -1,12 +1,13 @@
-# REST-JDBC-SPOED
+# REST-JDBC-SPOED #
+
 
 ![alt text](https://i.imgur.com/8uOMzYm.png "Logo Title Text 1")
 
  
 in deze opgave maak ik gebruik van database om de waarden in uit te lezen (via JDBC) en het restlet framework om waarden via een webservice in te geven.
----
-####OPGAVE:
--------
+
+### Opgave: ###
+
 De spoedgevallendienst van St Vincentius heeft een nieuw registratiesysteem nodig. 
 Maak een standalone (dus niet met een servlet) REST WebService met het restlet.org framework 
 die toelaat om registraties in te geven (5 punten). De registraties worden weggeschreven in een bestand op schijf. 
@@ -20,7 +21,7 @@ Een registratie bestaat uit :
     naam verpleegkundige
     diagnose
 ---
-|description table: 
+> description table: 
 	
 |Field		|type		|Null		|Key		|default	|extra		|
  -----------|:---------:|:---------:|:---------:|:---------:|----------:|
@@ -30,7 +31,7 @@ naam        | varchar(40)| NO   | PRI | NULL          |   	|
 | naamVerpleegkundige | varchar(40)  | NO   |     | Jill Seghers      |       |
 | diagnose            | varchar(100) | YES  |     | NULL              |       |
 
-|TABEL: repositories: 
+> tabel: repositories: 
 
 
 
@@ -48,7 +49,7 @@ create table registratie(interventiedatum TIMESTAMP not null default current_tim
                           diagnose varchar(40),
                           primary key (naam, interventiedatum));
 ```
----
+> insert statements
 ```SQL
 insert into registratie values 
 ('2011-05-25 14:20:02', 'tim celis', '1994-03-25', 'sonia kempen', 'viel door een glazen ruit'),
